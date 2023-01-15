@@ -25,7 +25,7 @@ func main() {
 		}
 	}()
 
-	uart.Configure(machine.UARTConfig{BaudRate: 115200, TX: tx, RX: rx})
+	uart.Configure(machine.UARTConfig{BaudRate: 9600, TX: tx, RX: rx})
 	for {
 		if uart.Buffered() > 0 {
 			data, _ := uart.ReadByte()
