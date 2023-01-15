@@ -25,7 +25,7 @@ func main() {
 		}
 	}()
 
-	uart.Configure(machine.UARTConfig{BaudRate: 9600, TX: tx, RX: rx})
+	uart.Configure(machine.UARTConfig{BaudRate: 115200, TX: tx, RX: rx})
 	cnt := byte(0)
 	for {
 		uart.Write([]byte{0x6D, 0x73, 0x67, 0x3a, 0x20, cnt + 48, 0x0d, 0x0a}) // "msg: {cnt}\r\n"
